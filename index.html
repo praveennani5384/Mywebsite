@@ -1,342 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<style>
-  /* Custom CSS for About Section */
-  .about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
-
-  /* Custom CSS for Projects Section */
-  .projects-section {
-    padding: 80px 0;
-    background-color: #f8f9fa;
-  }
-  .projects-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  .projects-section .card {
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-  }
-  .projects-section .card-img-top {
-    height: 180px; /* Adjust this value to fit the image properly in the card */
-    object-fit: cover; /* This makes sure the image covers the area properly */
-  }
-  .projects-section .card-body {
-    padding: 15px;
-  }
-  .projects-section .card-title {
-    font-size: 1.25rem;
-  }
-  .projects-section .card-text {
-    margin-bottom: 15px;
-  }
-
-  /* Custom CSS for Skills Section */
-  .skills-section {
-    padding: 80px 0;
-  }
-  .skills-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  .skills-section .card {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .skills-section .card-img-top {
-    padding: 20px; /* Add padding around your images if needed */
-    background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-    height: 180px; /* Fixed height for consistency */
-    object-fit: contain; /* This will make sure the image is scaled properly within the container */
-  }
-  .skills-section .card-body {
-    padding: 15px;
-  }
-  .skills-section .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-  .skills-section .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-  }
-  .skills-section .btn-outline-primary:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-
-  /* Custom CSS for Contact Section */
-  .contact-section {
-    padding: 80px 0;
-    background-color: #343a40;
-    color: white;
-  }
-  .contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  .contact-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  .contact-section .social-icon {
-    width: 50px; /* Size of your icons */
-    margin-bottom: 10px;
-  }
-  /* Hover effect for icons */
-  .contact-section .social-icon:hover {
-    opacity: 0.7;
-  }
-  /* Style for links in the Contact section */
-  .contact-section a {
-    color: #fff;
-    text-decoration: none; /* Removes underline from links */
-    display: inline-block; /* Allows for margin on the bottom */
-    margin-bottom: 10px;
-  }
-  .contact-section a:hover {
-    color: #ddd; /* Color when hovering over the link */
-  }
-
-  /* CSS for Sticky Navbar */
-  .navbar {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-  }
-  /* Ensure padding is added to body to avoid content being hidden behind the navbar */
-  body { 
-    padding-top: 56px; /* Adjust this value based on the height of your navbar */
-  }
-  /* Style for navigation bar links */
-  .navbar-nav .nav-link {
-    color: white;
-  }
-  .navbar-nav .nav-link:hover {
-    color: #f8f9fa; /* Slightly lighter white when hovering over links */
-  }
-  /* Media query for responsive navbar collapsing */
-  @media (max-width: 992px) {
-    .navbar-collapse {
-      background-color: #343a40; /* Same as navbar color for seamless look */
-    }
-  }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Kumar K - Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+    <header>
+        <div class="header-title">
+            <h1>Praveen Kumar K</h1>
+            <a href="Praveen_kumar_K_Resume.pdf" class="resume-button" target="_blank" download>RESUME</a> <!-- Added Resume button -->
+        </div>
+        <div class="header-content">
+            <h2>Data Scientist</h2>
+            <p>Email: <a href="mailto:praveennani384@gmail.com">praveennani384@gmail.com</a></p>
+            <p>Phone: 7780452533</p>
+            <p>Location: Hyderabad, India</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/praveen-kumar-k-739a88102" target="_blank">Profile</a></p>
+            <p>GitHub: <a href="https://github.com/praveennani384" target="_blank">Profile</a></p>
+        </div>
+    </header>
+    <div class="navbar">
+    <nav >
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Professional Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+    <div class="floating-menu">
+        <nav>
+            <ul>
+                <!--<li><a href="#profile"><i class="fas fa-user"></i></a></li>-->
+                <li><a href="#skills"><i class="fas fa-cogs"></i></a></li>
+                <li><a href="#certificates"><i class="fas fa-certificate"></i></a></li>
+                <!--<li><a href="#education"><i class="fas fa-graduation-cap"></i></a></li>-->
+                <li><a href="#projects"><i class="fas fa-folder"></i></a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
-</nav>
+    
+    <section id="profile">
+        <div class="profileheader"><h2>Profile</h2></div>
+        <p>Resilient and adaptable freelancer proficient in Selenium automation, transitioning to Data Science to utilize analytical skills and programming expertise. Aim to generate insights driving profitability and fostering company’s growth through targeted problem-solving.</p>
+    </section>
+    
+    <section id="skills">
+        <div class="skillsheader"><h2>Skills</h2></div>
+        <div class="skill-category">
+            <h3>Database & Development</h3>
+            <ul>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Shell Scripting</li>
+                <li>NoSQL</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Developing Machine Learning Models</h3>
+            <ul>
+                <li>AWS (Amazon Web Services)</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Data Visualization & Analytics</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>Excel</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Collaborative Development</h3>
+            <ul>
+                <li>GitHub</li>
+            </ul>
+        </div>
+        <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Critical Thinking</li>
+                <li>Problem Solving</li>
+                <li>Adaptability</li>
+                <li>Analytical Thinking</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="certificates">
+        <div class="certficateheader"><h2>Certificates</h2></div>
+        <div class="certificate-item">
+            <h3>Certificate of Internship by AImaster</h3>
+            <p>(6-03-2023 to 20-04-2023)</p>
+        </div>
+        <div class="certificate-item">
+            <h3>SAS Programming by Internshala</h3>
+            <p>(Certified on 23-07-2021)</p>
+        </div>
+        <div class="certificate-item">
+            <h3>UpGrad Data Science Bootcamp</h3>
+            <p>(14-03-2024)</p>
+        </div>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <img src="images/about/mypicture.JPEG" alt="About Me" class="mx-auto d-block img-fluid rounded-circle">
-    <p>🎓 Bachelor of Pharmacy graduate turned tech enthusiast, with a passion for diving deep into data realms.
-      <br>
-      💼 Freelancer in Selenium Java and Puppeteer JavaScript for over 2 and a half years, mastering the art of automation and precision.
-      <br>
-      📊 Equipped with a robust skill set in Data Science, including Excel, SQL, NoSQL, Python, and the development and deployment of ML models in AWS.
-      <br>
-      🚀 Fueled by an unyielding desire to delve deeper into the world of data, with aspirations to explore and innovate in the realms of Data Science and AI.
-      <br>
-      🔍 Always on the lookout for those lightbulb moments when data transforms into actionable insights, driving decisions and paving the way for new discoveries.
-      <br>
-      Let's connect and embark on a journey to unleash the power of data and create groundbreaking innovations together!</p>
-  </div>
-</section>
+    <section id="education">
+        <div class="educationheader"><h2>Education</h2></div>
+        <div class="education-item">
+            <h3>Bachelor of Pharmacy</h3>
+            <p>Teegala Krishna Reddy College of Pharmacy, Hyderabad, India</p>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="projectheading"><h2>Projects</h2></div> 
+        <div class="project">
+            <h3>NFT Analysis Project (SQL)</h3>
+            <p>Performed SQL-based analysis of NFT sales data, focusing on sales trends, transaction summaries, buyer behavior, and profitability.</p>
+            <ul>
+                <li>Transaction summaries</li>
+                <li>Buyer behavior</li>
+                <li>Profitability insights</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Credit Card Fraud Detection</h3>
+            <p>A machine learning model for accurate credit card fraud detection.</p>
+            <ul>
+                <li>Algorithm implementation</li>
+                <li>Data preprocessing</li>
+                <li>Performance metrics</li>
+                <li>Real-time application</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Movie Recommendation System</h3>
+            <p>Built a movie recommendation system using NLP and machine learning. The project involved data preprocessing, feature extraction, and content-based filtering via cosine similarity.</p>
+            <ul>
+                <li>Technologies: Python, Pandas, scikit-learn, Streamlit</li>
+                <li>Preprocessed movie data for accurate recommendations.</li>
+                <li>Applied content-based filtering with cosine similarity.</li>
+                <li>Developed an interactive UI for exploring recommendations.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Workforce SQL Manager</h3>
+            <p>Developed an SQL-based system to manage workforce data using Python and SQLAlchemy, featuring automated queries for data retrieval, manipulation, and reporting.</p>
+            <ul>
+                <li>Technologies: SQL, Python, SQLAlchemy</li>
+                <li>Automated SQL queries for workforce management.</li>
+                <li>Enabled real-time data handling and report generation.</li>
+                <li>Streamlined employee data management.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Naukri Web Scraper (Selenium)</h3>
+            <p>Created a web scraper to automate job listing extraction from Naukri.com, capturing details like roles, locations, companies, and salaries.</p>
+            <ul>
+                <li>Technologies: Python, Selenium</li>
+                <li>Automated job listing extraction from Naukri.com.</li>
+                <li>Parsed and stored job details effectively.</li>
+                <li>Enhanced job search efficiency through automation.</li>
+            </ul>
+        </div>
+    </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-  <div class="container">
-    <h2 class="text-center mb-5">Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/projects/1.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">credit_card_fraud_detection</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="https://github.com/praveennani384/credit_card_fraud_detection" class="btn btn-secondary" target="_blank">Source Code</a>
-          </div>
+    <section id="experience">
+        <div class="experienceheading">
+            <h2>Professional Experience</h2>
         </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">SQL_NFT_project</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="https://github.com/praveennani384/SQL_NFT_project" class="btn btn-secondary" target="_blank">Source Code</a>
-          </div>
+        <div class="experience">
+            <h3>Wisdom Meetings, Freelancer</h3>
+            <p>02/2022 – Present | Hyderabad, India</p>
+            <ul>
+                <li>Data analysis: Collect data and analyze using Excel.</li>
+                <li>Data Collection: Automated data collection from various sites.</li>
+            </ul>
         </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Chatbots_basics</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="https://github.com/praveennani384/Chatbots_basics" class="btn btn-secondary" target="_blank">Source Code</a>
-          </div>
+        <div class="experience">
+            <h3>Another Company, Position</h3>
+            <p>01/2021 – 01/2022 | Location</p>
+            <ul>
+                <li>Task or responsibility 1.</li>
+                <li>Task or responsibility 2.</li>
+                <li>Task or responsibility 3.</li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Add more experience entries as needed -->
+    </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section bg-white">
-  <div class="container">
-    <h2 class="text-center mb-5">Skills</h2>
-    <div class="row">
-      <!-- Skill 1 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/1.png" class="card-img-top" alt="Python">
-          <div class="card-body">
-            <h5 class="card-title">Python</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 2 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 3 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
-          <div class="card-body">
-            <h5 class="card-title">SQL</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 4 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
-          <div class="card-body">
-            <h5 class="card-title">Data Storytelling</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on social media.</p>
+        <ul>
+            <li>Email: <a href="mailto:praveennani384@gmail.com">praveennani384@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/praveen-kumar-k-739a88102" target="_blank">Your LinkedIn Profile</a></li>
+            <li>GitHub: <a href="https://github.com/praveennani384" target="_blank">Your GitHub Profile</a></li>
+        </ul>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section text-white bg-dark">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <p><i class="fas fa-envelope"></i> praveennani5384@gmail.com</p>
-      </div>
-      <div class="col-lg-6">
-        <p><i class="fas fa-phone"></i>+91 7780452533</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://www.linkedin.com/in/praveen-kumar-k-739a88102/" target="_blank" class="text-white">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://twitter.com/yourusername" target="_blank" class="text-white">
-          <img src="icons/twitter.png" alt="Twitter" class="social-icon">
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/yourusername" target="_blank" class="text-white">
-          <img src="icons/github.png" alt="GitHub" class="social-icon">
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://medium.com/@yourusername" target="_blank" class="text-white">
-          <img src="icons/medium.png" alt="Medium" class="social-icon">
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://youtube.com/c/yourchannel" target="_blank" class="text-white">
-          <img src="icons/youtube.png" alt="YouTube" class="social-icon">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2023 Praveen Kumar K. All rights reserved.</p>
+    </footer>
+    <script>
+        // Scroll to the top when the page is loaded
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    
+        // Scroll to the top when the page is unloaded (before refresh)
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
+
+</html>
+    </body>
 </html>
