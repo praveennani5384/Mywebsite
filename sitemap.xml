@@ -2,50 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#profile</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-     <url>
+    <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#skills</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-     <url>
+    <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#certificates</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#education</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
-     <url>
+    <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#projects</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
-     <url>
+    <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#experience</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.k-praveen-kumar-portfolio.info/#contact</loc>
-        <lastmod>2024-05-22</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.k-praveen-kumar-portfolio.info/Praveen_kumar_K_Resume.pdf</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://github.com/praveennani384</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.linkedin.com/in/praveen-kumar-k-739a88102</loc>
+        <priority>0.5</priority>
     </url>
 </urlset>
