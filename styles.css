@@ -510,6 +510,7 @@ a:visited {
     color: white;
 }
 .deeplearning{
+    
     width: 100%; /* Make the heading take the full width */
     background: grey; /* Background color for the heading */
     padding: 10px 15px; /* Padding around the heading */
