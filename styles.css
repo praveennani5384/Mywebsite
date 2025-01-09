@@ -17,39 +17,39 @@ body {
 header {
     color: white;
     background-color: #333;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+    background-size: cover; /* Cover the entire header with the image */
+    background-position: center; /* Center the image horizontally and vertically */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right content */
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px; /* Add some padding */
     border-radius: 10px;
 }
 
 .header-title {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack the name and button vertically */
 }
 
 .resume-button {
-    margin-top: 15px;
-    padding: 20px 70px;
-    background-color: #030b13;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 25px;
-    transition: background-color 0.3s;
+    margin-top: 15px; /* Increase space between the name and the button */
+    padding: 20px 70px; /* Increase padding for a larger button */
+    background-color: #030b13; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 25px; /* Increase font size for the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .resume-button:hover {
-    background-color: #3d3d3e;
+    background-color: #3d3d3e; /* Darker background on hover */
     background: gray;
 }
 
 .header-content {
-    text-align: right;
+    text-align: right; /* Align text to the right */
     color: white;
 }
 
@@ -126,6 +126,7 @@ footer {
     width: 100%;
 }
 
+
 /* Responsive Design */
 @media (max-width: 600px) {
     nav ul li {
@@ -133,47 +134,47 @@ footer {
         margin: 5px 0;
     }
 }
-
 /* Floating Menu Bar */
 .floating-menu {
-    position: fixed;
-    right: 20px;
-    top: 70%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border-radius: 5px;
-    box-shadow: none;
-    padding: 0;
+    position: fixed; /* Fixes the menu to the viewport */
+    right: 20px; /* Distance from the right edge */
+    top: 70%; /* Adjust this value to move the menu down (e.g., 70% instead of 50%) */
+    transform: translateY(-50%); /* Adjust for centering */
+    background-color: transparent; /* Make the background transparent */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: none; /* Remove shadow for a cleaner look */
+    padding: 0; /* Remove padding around the menu */
 }
 
 .floating-menu ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 .floating-menu ul li {
-    display: block;
-    margin: 10px 0;
+    display: block; /* Stack items vertically */
+    margin: 10px 0; /* Space between menu items */
 }
 
 .floating-menu ul li a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: transparent;
-    color: #000000;
-    font-size: 20px;
-    transition: color 0.3s;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add padding for a block effect */
+    background-color: transparent; /* Make the background transparent */
+    color: #000000; /* Icon color */
+    font-size: 20px; /* Increase font size for icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 .floating-menu ul li a:hover {
-    color: #5c6562;
-    text-decoration: none;
+    color: #5c6562; /* Darker icon color on hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
+/* Style for Font Awesome icons */
 .floating-menu ul li a i {
-    margin-right: 0;
-    font-size: 20px;
+    margin-right: 0; /* Remove space since only icons are visible */
+    font-size: 20px; /* Set the font size for Font Awesome icons */
 }
 
 .navbar{
@@ -191,252 +192,267 @@ footer {
     margin: auto;
 }
 a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+    color: white; /* Text color for unvisited links */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for links */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
 a:hover {
-    background: #28a745;
-    border-radius: 5px;
+    background: #28a745; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
 }
 
+/* Override the visited link color */
 a:visited {
-    color: white;
+    color: white; /* Keep the same color for visited links */
 }
 #skills {
-    padding: 20px;
-    background: #4f5152;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px; /* Padding around the skills section */
+    background: #4f5152; /* Light background color for the section */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between the boxes */
 }
 
 .skill-category {
     background-color: #53585e;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1 1 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Background color for skill category boxes */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the boxes */
+    margin: 10px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
 }
 
 .skill-category h3 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space below the subheading */
 }
 
 .skill-category ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .skill-category li {
-    background-color: #ccd9e7;
-    color: black;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ccd9e7; /* Background color for skill items */
+    color: black; /* Text color */
+    padding: 10px; /* Padding inside the boxes */
+    margin: 5px 0; /* Margin between items */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
 }
 
 .skill-category li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
     background: #28a745;
 }
 #certificates {
-    padding: 20px;
-    background: #4f5152;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px; /* Padding around the certificates section */
+    background: #4f5152; /* Light background color for the section */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between the boxes */
 }
 
 .certificate-item {
-    background-color: #2f3131;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1 1 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #2f3131; /* Background color for certificate boxes */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the boxes */
+    margin: 10px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
 }
 
 .certificate-item h3 {
-    margin-bottom: 5px ;
+    margin-bottom: 5px ; /* Space below the certificate title */
+
 }
 
 .certificate-item p {
-    margin: 0;
+    margin: 0; /* Remove default margin */
 }
 .certificate-item:hover{
     background: #28a745;
 }
 #education {
-    padding: 20px;
-    background: #4f5152;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 20px; /* Padding around the education section */
+    background: #4f5152; /* Light background color for the section */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the boxes */
 }
 
 .education-item {
-    background-color: #2f3131;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1 1 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #2f3131; /* Background color for education box */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the box */
+    margin: 10px; /* Margin around the box */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
 }
 
 .education-item h3 {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Space below the education title */
 }
 
 .education-item p {
-    margin: 0;
+    margin: 0; /* Remove default margin */
 }
 .education-item:hover{
     background: #28a745;
 }
 #projects {
-    padding: 20px;
-    background: #4f5152;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px; /* Padding around the projects section */
+    background: #4f5152; /* Light background color for the section */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    /*justify-content: space-between; /* Space between the boxes */
 }
 
 .projectheading {
-    width: 100%;
-    background: grey;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
     color: white;
 }
 
 .project {
-    background-color: #2f3131;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: calc(33.333% - 20px);
+    background-color: #2f3131; /* Background color for project boxes */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the boxes */
+    margin: 10px; /* Margin around the boxes */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1; /* Flex-grow, flex-shrink, and base width for three columns */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+    max-width: calc(33.333% - 20px); /* Ensure max width for three columns */
 }
 .project:hover{
     background: #28a745;
 }
 
 .project h3 {
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin-bottom: 5px; /* Reduced space below the project title */
+    margin-top: 0; /* Remove top margin to move it up */
 }
 
 .project p {
-    margin: 10px 0;
+    margin: 10px 0; /* Space above and below the project description */
 }
 
 .project ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .project li {
-    margin: 5px 0;
+    margin: 5px 0; /* Space between list items */
+}
+.github a {
+    color: white;
+     text-decoration: none; /* Remove underline from link */
+      display: inline-block; /* Make the link behave like an inline block */
+        padding: 8px 12px; /* Add some padding to make it easier to click */
+          border-radius: 4px; /* Add some border-radius */
+          transition: background-color 0.3s ease; /* Add smooth transitions */
+}
+
+.github a:hover{
+    background-color: #007bff; /* Example: a different color for the link hover */
 }
 #profile{
     background: #4f5152;
     color: whitesmoke;
 }
 .skillsheader{
-    width: 100%;
-    background: grey;
-    padding:0px;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding:0px; /* Padding around the heading */
+    margin-bottom: 0%; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
     color: white;
 }
 .profileheader{
-    width: 100%;
-    background: grey;
-    padding:0px;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding:0px; /* Padding around the heading */
+    margin-bottom: 0%; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
 }
 .certficateheader{
-    width: 100%;
-    background: grey;
-    padding:0px;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding:0px; /* Padding around the heading */
+    margin-bottom: 0%; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
     color: white;
 }
 .educationheader{
-    width: 100%;
-    background: grey;
-    padding:0px;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding:0px; /* Padding around the heading */
+    margin-bottom: 0%; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
     color: white;
 }
 #experience {
-    padding: 20px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px; /* Padding around the experience section */
+    background-color: #f9f9f9; /* Light background color for the section */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    /*justify-content: space-between; /* Space between the boxes */
 }
 
 .experienceheading {
-    width: 100%;
-    background: grey;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
 }
 
 .experience {
-    background-color: #2f3131;
-    color: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: calc(33.333% - 20px);
+    background-color: #2f3131; /* Background color for experience boxes */
+    color: white; /* Text color */
+    padding: 15px; /* Padding inside the boxes */
+    margin: 10px; /* Margin around the boxes */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 calc(33.333% - 20px); /* Flex-grow, flex-shrink, and base width for three columns */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+    max-width: calc(33.333% - 20px); /* Ensure max width for three columns */
 }
 
 .experience h3 {
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin-bottom: 5px; /* Reduced space below the experience title */
+    margin-top: 0; /* Remove top margin to move it up */
 }
 
 .experience p {
-    margin: 10px 0;
+    margin: 10px 0; /* Space above and below the experience description */
 }
 
 .experience ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .experience li {
-    margin: 5px 0;
+    margin: 5px 0; /* Space between list items */
 }
 #contact{
     background: #4f5152;
@@ -476,6 +492,15 @@ a:visited {
     color: white;
 }
 .ETL{
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
+    color: white;
+}
+.Timeseries{
     width: 100%; /* Make the heading take the full width */
     background: grey; /* Background color for the heading */
     padding: 10px 15px; /* Padding around the heading */
