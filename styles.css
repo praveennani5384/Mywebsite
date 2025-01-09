@@ -448,3 +448,39 @@ a:visited {
 .experience:hover{
     background: #28a745;
 }
+.SQL_projects{
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
+    color: white;
+}
+.Machine_learning_Projects{
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
+    color: white;
+}
+.Data_Extraction{
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
+    color: white;
+}
+.ETL{
+    width: 100%; /* Make the heading take the full width */
+    background: grey; /* Background color for the heading */
+    padding: 10px 15px; /* Padding around the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the heading text */
+    color: white;
+}
