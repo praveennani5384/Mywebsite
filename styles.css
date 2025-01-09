@@ -212,7 +212,7 @@ a:visited {
     background: #4f5152; /* Light background color for the section */
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-between; /* Space between the boxes */
+    /*justify-content: space-between; /* Space between the boxes */
 }
 
 .skill-category {
@@ -255,7 +255,7 @@ a:visited {
     background: #4f5152; /* Light background color for the section */
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-between; /* Space between the boxes */
+    /*justify-content: space-between; /* Space between the boxes */
 }
 
 .certificate-item {
@@ -321,7 +321,7 @@ a:visited {
     padding: 10px 15px; /* Padding around the heading */
     margin-bottom: 20px; /* Space below the heading */
     display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the heading text */
+    /*justify-content: center; /* Center the heading text */
     color: white;
 }
 
@@ -331,7 +331,7 @@ a:visited {
     padding: 15px; /* Padding inside the boxes */
     margin: 10px; /* Margin around the boxes */
     border-radius: 5px; /* Rounded corners */
-    flex: 1; /* Flex-grow, flex-shrink, and base width for three columns */
+    flex: 1 1 calc(33.333% - 20px); /* Flex-grow, flex-shrink, and base width for three columns */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
     max-width: calc(33.333% - 20px); /* Ensure max width for three columns */
 }
