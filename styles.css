@@ -516,5 +516,5 @@ a:visited {
     margin-bottom: 20px; /* Space below the heading */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center the heading text */
-    color: white;
+    color: white
 }
