@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Tech Articles Project Explanation</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+             color: #333;
+            text-align: center;
+            border-bottom: 2px solid #333;
+             padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .section {
+             margin-bottom: 20px;
+        }
+        .uses-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .use-box {
+             background-color: #f0f8ff; /*light blue */
+             padding: 15px;
+            border: 1px solid #ddd;
+             border-radius: 8px;
+            width: calc(25% - 40px); /* 4 boxes per row, adjust width as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* slight shadow for depth */
+           
+            text-align: center;
+        }
+        
+        .use-box::before {
+          content: '✅';
+          display: block;
+          font-size: 24px;
+           margin-bottom: 8px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+             border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Web Scraping Tech Articles</h1>
+        <h2>Detailed Explanation of the Project</h2>
+        <p>This project uses Selenium to scrape article information from a sample website consisting of multiple HTML pages. The web scraper navigates through the pages, extracts the title, author, date, summary, tags, and contact information from each article, and saves this data into a CSV file. The goal was to emulate scraping a real-world news or tech blog, while respecting the confidentiality requirements that you have.</p>
+    </div>
+
+    <div class="section">
+        <h2>Core Functionalities</h2>
+        <ul>
+            <li><strong>Dynamic URL Construction:</strong> The script dynamically constructs the URL to access the main page using the current working directory.</li>
+            <li><strong>Automated Browser Navigation:</strong>
+               <ul>
+                 <li>Uses Selenium to control a Chrome browser and open the main page (<code>index.html</code>).</li>
+                  <li>Maximizes the browser window for better visibility.</li>
+                  <li>Navigates through multiple pages of articles using the pagination links.</li>
+              </ul>
+          </li>
+            <li><strong>Article Link Extraction:</strong> Identifies and extracts the links to individual articles using XPath.</li>
+           <li><strong>New Tab Handling:</strong>
+              <ul>
+                  <li>Opens each article link in a new tab using a control-click action.</li>
+                   <li>Switches the WebDriver to the newly opened tab for data extraction.</li>
+              </ul>
+            </li>
+            <li><strong>Data Extraction:</strong>
+                <ul>
+                     <li>Extracts article information from each page using Selenium and a combination of `By.XPATH` and `By.CLASS_NAME`:
+                          <ul>
+                              <li>Title is extracted using the <code>h2</code> tag.</li>
+                             <li>Author and date from <code>p</code> tags using Xpath and splitting the values.</li>
+                             <li>Summary from the <code>full-content</code> class.</li>
+                            <li>Tags from <code>p</code> tag using Xpath and splitting the values.</li>
+                            <li>Contact information from <code>contact</code> class.</li>
+                        </ul>
+                    </li>
+                    <li>Handles optional elements (like summaries) that might be absent on some pages.</li>
+                </ul>
+            </li>
+             <li><strong>Error Handling:</strong> Uses <code>WebDriverWait</code> to handle dynamic loading of content and employs try-except block to manage <code>TimeoutException</code> to handle missing elements. It provides the page source in the terminal in case an error occurs for troubleshooting purposes.</li>
+            <li><strong>Data Output:</strong> Stores all scraped information in a CSV file named `articles_data.csv`.</li>
+            <li><strong>Dynamic Scrolling:</strong> Scrolls the page down after every two articles to ensure that all the content is loaded.</li>
+            <li><strong>Tab Management:</strong> Closes each article tab after extracting data and switches back to the main tab.</li>
+              <li><strong>Progress Tracking:</strong> Prints progress information to the console (which page it's scraping) and what it is able to extract from the pages.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+       <h2>HTML Structure</h2>
+        <ul>
+            <li>The project has 4 HTML pages, that mimic a tech news or blog website.</li>
+            <li>Each of the article pages has the same structure for the layout.</li>
+            <li>The main page (<code>index.html</code>) is the entry point and contains list of links for the other articles.</li>
+            <li>The articles have information like title, author, date, summary, tags, and contact.</li>
+            <li>Each article has a pagination for navigation.</li>
+            <li>The `styles.css` and `article_styles.css` has the styling of the main and article pages respectively.</li>
+        </ul>
+     </div>
+     <div class="section">
+        <h2>Uses</h2>
+        <div class="uses-container">
+            <div class="use-box">Automated Data Collection</div>
+            <div class="use-box">Web Scraping with Selenium</div>
+             <div class="use-box">Data Extraction</div>
+             <div class="use-box">Multi-Page Navigation</div>
+            <div class="use-box">Data Storage in CSV</div>
+            <div class="use-box">Error Handling</div>
+            <div class="use-box">Dynamic Web Handling</div>
+             <div class="use-box">Handles Timeout</div>
+             <div class="use-box">Handles Optional Fields</div>
+               <div class="use-box">Good Use of Selenium and Action Chains</div>
+        </div>
+    </div>
+</body>
+</html>
