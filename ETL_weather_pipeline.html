@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather ETL Pipeline Project Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+             color: #333;
+            text-align: center;
+            border-bottom: 2px solid #333;
+             padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+         .section {
+             margin-bottom: 20px;
+        }
+        .uses-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+         .use-box {
+             background-color: #f0f8ff; /*light blue */
+             padding: 15px;
+            border: 1px solid #ddd;
+             border-radius: 8px;
+            width: calc(25% - 40px); /* 4 boxes per row, adjust width as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* slight shadow for depth */
+           
+            text-align: center;
+        }
+        
+        .use-box::before {
+          content: '✅';
+          display: block;
+          font-size: 24px;
+           margin-bottom: 8px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+             border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Weather ETL Pipeline</h1>
+        <h2>Detailed Explanation of the System</h2>
+        <p>This project implements an ETL (Extract, Transform, Load) pipeline that retrieves weather data from the Open-Meteo API, processes it, and stores it in a PostgreSQL database. It utilizes Apache Airflow to manage the workflow and Docker for containerization. Data is specifically for Hyderabad city.</p>
+    </div>
+     <div class="section">
+        <h2>Overall Architecture</h2>
+         <p>The project is structured around an Airflow DAG (Directed Acyclic Graph) that orchestrates the ETL process. The data is extracted from the Open Meteo API and loaded into a postgresql database. The process is containerized for easy deployment using docker.</p>
+         
+    </div>
+    <div class="section">
+        <h2>ETL Process</h2>
+        <ul>
+           <li><strong>Extraction:</strong>
+                <ul>
+                    <li>The <code>extract_weather_data</code> task uses Airflow's <code>HttpHook</code> to fetch weather data from the Open-Meteo API for the specified latitude and longitude (Hyderabad).</li>
+                     <li>The API endpoint is constructed dynamically with the latitude and longitude.</li>
+                    <li>Data is retrieved in JSON format.</li>
+                </ul>
+            </li>
+            <li><strong>Transformation:</strong>
+                <ul>
+                   <li>The <code>transform_weather_data</code> task receives the raw JSON data, extracts the relevant weather information such as temperature, wind speed, wind direction and weather code.</li>
+                   <li>The data is transformed into a Python dictionary.</li>
+                </ul>
+            </li>
+            <li><strong>Loading:</strong>
+                <ul>
+                    <li>The <code>load_weather_data</code> task takes the transformed data and loads it into a PostgreSQL database.</li>
+                    <li>A table called <code>weather_data</code> is created (if it does not exist) with columns for location, temperature, wind speed, wind direction, weather code and time stamp.</li>
+                     <li>Data is inserted into the <code>weather_data</code> table with a current timestamp.</li>
+                     <li>The connection is commited and cursor is closed after the process.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+     <div class="section">
+        <h2>Infrastructure</h2>
+        <ul>
+           <li><strong>Docker Compose:</strong> The project uses Docker Compose to manage containers.
+                <ul>
+                   <li><strong>PostgreSQL Database:</strong> A PostgreSQL database container named <code>postgres_db</code> is used to store the weather data.</li>
+                     <li><strong>Airflow Webserver:</strong> An Airflow webserver container named <code>airflow-webserver</code> provides a UI for monitoring and managing the ETL pipeline.</li>
+                   <li><strong>Airflow Scheduler:</strong> An Airflow scheduler container named <code>airflow-scheduler</code> is responsible for running the DAG on schedule.</li>
+                </ul>
+            </li>
+            <li><strong>Airflow Setup:</strong> 
+                <ul>
+                   <li>Airflow is configured to use the PostgreSQL database and the <code>LocalExecutor</code>.</li>
+                   <li>DAGs, logs, and plugins are mounted as volumes for persistence.</li>
+                    <li>Airflow is configured with RBAC (Role Based Access Control).</li>
+                </ul>
+            </li>
+            <li><strong>Astro CLI:</strong>
+            <ul>
+            	<li>The project uses the Astro CLI for initialization and starting the Airflow environment.</li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Setup Instructions</h2>
+        <ol>
+            <li><strong>Prerequisites:</strong>
+                <ul>
+                    <li>Ensure you have the latest version of Docker installed on your PC.</li>
+                    <li>Install the Astro CLI by following the instructions at <a href="https://docs.astronomer.io/astro/cli/install-cli">Astronomer documentation.</a></li>
+                    <li>Install airflow as a dev dependency using <code>pip install apache-airflow</code></li>
+                   
+                </ul>
+            </li>
+            <li><strong>Project Setup:</strong>
+                <ul>
+                    <li>Create a new folder for the project and open it in VS Code (e.g., <code>code .</code> in the terminal after shift+right click)</li>
+                    <li>In VS Code terminal run <code>astro dev init</code> to initialize the project.</li>
+                    <li>Create a file in the <code>dags</code> folder (e.g., <code>weather_etl_pipeline.py</code>) and paste in the python code.</li>
+                    <li>Create a <code>docker-compose.yml</code> file and add docker compose configuration.</li>
+                </ul>
+            </li>
+            <li><strong>Running the Project:</strong>
+                <ul>
+                    <li>Ensure Docker is running with a proper internet connection.</li>
+                    <li>In the VS code terminal start the project with <code>astro dev start</code>.</li>
+                    <li>Airflow UI will automatically open in your web browser. Login with <code>admin</code> as both username and password.</li>
+                    <li>Go to Admin -> Connections and create two connections:
+                        <ul>
+                            <li>A PostgreSQL connection for the database with connection ID <code>postgres_default</code> and the appropriate connection details.</li>
+                            <li>An HTTP connection for the Open-Meteo API, connection id should be <code>open_meteo_api</code>. Ensure you set `https://api.open-meteo.com` as the base URL for this.</li>
+                        </ul>
+                    </li>
+                   
+                    <li>Go back to DAGs and enable the <code>weather_Pipeline</code> DAG.</li>
+                   
+                    <li>If you see any errors in the DAG graph, adjust and restart the program.</li>
+                </ul>
+            </li>
+             <li><strong>Checking the database:</strong>
+                <ul>
+                     <li>Install and launch DBeaver</li>
+                     <li>Create a new PostgreSQL connection and provide the connection details, then connect to the database.</li>
+                    <li>Run <code>SELECT * FROM weather_data;</code> query to see the loaded data.</li>
+                </ul>
+             </li>
+             <li><strong>Handling Task Errors:</strong>
+              <ul>
+                     <li>If you encounter an error saying "another task running in the same name", kill the task and restart the docker using the command <code>docker compose up</code> or you can just restart the airflow with <code>astro dev start</code>.</li>
+                </ul>
+             </li>
+        </ol>
+    </div>
+    <div class="section">
+        <h2>Uses</h2>
+       <div class="uses-container">
+            <div class="use-box">Automated ETL Pipeline</div>
+            <div class="use-box">Airflow Workflow Management</div>
+             <div class="use-box">Docker Containerization</div>
+            <div class="use-box">PostgreSQL Database</div>
+            <div class="use-box">Open Meteo API Integration</div>
+             <div class="use-box">Data Ingestion</div>
+               <div class="use-box">Weather Data Analysis</div>
+               <div class="use-box">Real-Time Data Processing</div>
+            <div class="use-box">Basic Automation Project</div>
+               <div class="use-box">Good Use of Airflow and Postgres</div>
+        </div>
+    </div>
+</body>
+</html>
