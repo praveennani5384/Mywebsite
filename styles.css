@@ -367,7 +367,7 @@ a:visited {
 }
 
 .github a:hover{
-    background-color: #007bff; /* Example: a different color for the link hover */
+    background-color: #0a0a0a;; /* Example: a different color for the link hover */
 }
 #profile{
     background: #4f5152;
