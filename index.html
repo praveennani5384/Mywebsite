@@ -237,5 +237,93 @@
             window.scrollTo(0, 0);
         };
     </script>
+    <script>
+        // Chatbot JavaScript
+        const chatLog = document.getElementById('chat-log');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        sendButton.addEventListener('click', function() {
+            const message = userInput.value;
+            if (message.trim() === "") return;
+
+            chatLog.innerHTML += `<p class="user-message">You: ${message}</p>`;
+            userInput.value = '';
+            chatLog.scrollTop = chatLog.scrollHeight;
+
+            let response = "I'm sorry, I don't have specific information on that. Please ask something else.";
+
+            // Regular Expressions for Intent Recognition and Responses
+
+            if (/hello|hi|greetings/i.test(message)) {
+                response = "Hello there! Welcome to my portfolio. How can I assist you today?";
+            } else if (/how are you|how's it going/i.test(message)) {
+                response = "I'm doing well, thank you for asking! How can I help you with my portfolio?";
+            } else if (/your name|who are you/i.test(message)) {
+                response = "I'm a simple chatbot created for this portfolio. You can call me 'PortfolioBot'. I'm here to provide information about Praveen Kumar.";
+            } else if (/(experience|worked|employment|job history|previous roles)/i.test(message)) {
+                response = "I have experience as a Data Scientist at Wisdom Meetings, focusing on data analysis and automation. I also worked as a Freelance Web Automation specialist, developing Selenium scripts. See the 'Professional Experience' section for details.";
+            } else if (/(educational background|qualifications)/i.test(message)) {
+                response = "My educational background includes a Bachelor of Pharmacy from Teegala Krishna Reddy College of Pharmacy, Hyderabad, India.";
+            } else if (/(skills|what can you do|abilities|expertise)/i.test(message)) {
+                response = "My skills include: SQL, Python, Shell Scripting, NoSQL, AWS, Tableau, Power BI, Excel, GitHub, Critical Thinking, Problem Solving, Adaptability, and Analytical Thinking. See the 'Skills' section for a breakdown.";
+            } else if (/(certifications|certificates|credentials)/i.test(message)) {
+                response = "I hold a Certificate of Internship by AImaster, SAS Programming by Internshala, and completed the UpGrad Data Science Bootcamp. Details are in the 'Certificates' section.";
+            } else if (/(projects|portfolio|work)/i.test(message)) {
+                response = "My projects are categorized as: \n" +
+                           "- SQL Projects: NFT Analysis Project, Workforce SQL Manager \n" +
+                           "- Machine Learning Projects: Credit Card Fraud Detection, Movie Recommendation System, Diabatic Prediction \n" +
+                           "- Deep Learning Projects: MNIST Handwritten Digit Recognizer \n" +
+                           "- Timeseries: E-commerce Data Analysis App\n" +
+                           "- Data Extraction: Naukri Web Scraper (Selenium), Web Scraper (Selenium)\n" +
+                           "- ETL Projects: ETL Weather Pipeline. \n" +
+                           "See the 'Projects' section for links to GitHub repositories.";
+            } else if (/contact|reach you|get in touch/i.test(message)) {
+                response = "You can reach me via email at praveennani384@gmail.com or connect on LinkedIn and GitHub (links above).";
+            } else if (/resume|cv|download your information/i.test(message)) {
+                response = "You can download my resume using the 'RESUME' button at the top of the page.";
+            } else if (/complete your graduation|graduation year|graduation|passed out year|when did you passed out/i.test(message)) {
+                response = "I have completed my Bpharm in 2023.";
+            } else if (/education|your education details/i.test(message)) {
+                response = "i have completed my bpharm in 2023 from teegala krishna reddy college of pharmacy. and later took adata science bootcamp from upgrad.";
+            }  else if (/tell me about yourself|about you|introduce yourself/i.test(message)) {
+        response = "I can provide information about Praveen Kumar. Choose an option:\n" +
+                   "1. Skills\n" +
+                   "2. Education\n" +
+                   "3. Experience\n" +
+                   "4. Projects\n" +
+                   "5. Certifications\n" +
+                   "Please enter the number corresponding to your choice.";
+    } else if (message === "1") {
+        response = "Praveen's skills include: SQL, Python, Shell Scripting, NoSQL, AWS, Tableau, Power BI, Excel, GitHub, Critical Thinking, Problem Solving, Adaptability, and Analytical Thinking.";
+    } else if (message === "2") {
+        response = "Praveen's educational background includes a Bachelor of Pharmacy from Teegala Krishna Reddy College of Pharmacy, Hyderabad, India.";
+    } else if (message === "3") {
+        response = "Praveen has experience as a Data Scientist at Wisdom Meetings and as a Freelance Web Automation specialist.  See the 'Professional Experience' section for details.";
+    } else if (message === "4") {
+        response = "Praveen's projects are categorized as: \n" +
+                   "- SQL Projects: NFT Analysis Project, Workforce SQL Manager \n" +
+                   "- Machine Learning Projects: Credit Card Fraud Detection, Movie Recommendation System, Diabatic Prediction \n" +
+                   "- Deep Learning Projects: MNIST Handwritten Digit Recognizer \n" +
+                   "- Timeseries: E-commerce Data Analysis App\n" +
+                   "- Data Extraction: Naukri Web Scraper (Selenium), Web Scraper (Selenium)\n" +
+                   "- ETL Projects: ETL Weather Pipeline. \n" +
+                   "See the 'Projects' section for links to GitHub repositories.";
+    } else if (message === "5") {
+        response = "Praveen holds a Certificate of Internship by AImaster, SAS Programming by Internshala, and completed the UpGrad Data Science Bootcamp. Details are in the 'Certificates' section.";
+    }
+
+            setTimeout(() => {
+                chatLog.innerHTML += `<p class="bot-message">Bot: ${response}</p>`;
+                chatLog.scrollTop = chatLog.scrollHeight;
+            }, 500);
+        });
+
+        userInput.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                sendButton.click();
+            }
+        });
+    </script>
 </body>
 </html>
