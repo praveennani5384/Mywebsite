@@ -601,3 +601,166 @@ a:visited {
         font-size: 1.2em; /* Adjust project title size */
     }
 }
+/* Chatbot Styles */
+#chatbot-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#chat-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#chat-log {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: white;
+}
+
+#chat-log p {
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #dcf8c6; /* Light green */
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #eee; /* Light gray */
+    text-align: left;
+}
+
+#chat-input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #eee;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 8px 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #3e8e41;
+}
+
+/* Add new CSS below this line */
+
+/* Media Query for Mobile Devices (example: screens smaller than 768px) */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center; /* Center items in the header */
+        text-align: center; /* Center text in the header */
+    }
+
+    .header-content {
+        text-align: center; /* Center contact information */
+        margin-top: 10px;
+    }
+
+    .resume-button {
+        padding: 10px 30px; /* Smaller button padding */
+        font-size: 18px; /* Smaller button font size */
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust subheading size */
+    }
+
+    nav {
+        margin: 10px 0; /* Reduce navigation margin */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center navigation items */
+    }
+
+    .navbar ul li {
+        display: block; /* Stack list items vertically */
+        margin: 5px 0; /* Add spacing between list items */
+        text-align: center; /* Center-align the text */
+    }
+    .navbar a {
+        padding: 10px; /* Increase padding for better touch targets */
+        display: block; /* Make the entire link area clickable */
+        width: 100%; /* Occupy the full width */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    .floating-menu {
+        position: fixed;
+        bottom: 20px; /* Position at the bottom */
+        top: auto; /* Override top positioning */
+        left: 50%; /* Center horizontally */
+        right: auto;
+        transform: translateX(-50%); /* Center the menu */
+        width: 100%; /* Full width */
+        max-width: 300px; /* Limit width for larger screens */
+        background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-menu ul {
+        display: flex;
+        justify-content: space-around; /* Distribute items evenly */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .floating-menu ul li {
+        margin: 0; /* Remove vertical margins */
+    }
+
+    .floating-menu ul li a {
+        padding: 8px;
+        font-size: 18px; /* Adjust icon size */
+    }
+
+    #skills, #projects, #certificates, #education {
+        flex-direction: column; /* Stack skill/project categories vertically */
+    }
+
+    .skill-category, .project, .certificate-item, .education-item, .experience {
+        flex: 1 1 100%; /* Each item takes full width */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .project h3 {
+        font-size: 1.2em; /* Adjust project title size */
+    }
+}
